@@ -104,3 +104,110 @@ button {
     color: #fff;
     cursor: pointer;
 }
+
+button.perigo {
+    background-color: #c039c0;
+    padding: 4px 10px;
+}
+
+/* Tabela */
+.rolagem {
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--borda);
+    white-space: nowrap;
+}
+
+
+th {
+    background-color: #dfe7f2;
+}
+
+.acoes {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.acoes form {
+    margin: 0;
+}
+
+/* selos de situação*/
+.selo {
+    padding: 2px 10px;
+    border-radius: 99px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.selo.aprovado {
+    background-color: #d9f2e1;
+    color: ;
+}
+
+.selo.reprovado {
+    background-color: #fbdcdc;
+    color: #8a1c1c;
+}
+
+/*formulario*/
+.formulario {
+    display: grid;
+    gap: 14px;
+    max-width: 360px;
+}
+
+.formulario label {
+    display: grid;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.formulario div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Cartões do Relatorio */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.cartao {
+    background-color: #fff;
+    padding: 14px;
+    border-radius: 8px;
+    border-top: 4px solid var(--pricipal);
+}
+
+.cartao span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cartao.aprovado {
+    border-color: #e0a800;
+}
+
+.cartao.reprovado {
+    border-color: #c0392b;
+}
+
