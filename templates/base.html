@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block titulo %}Sistema de notas{% endblock %}</title>
+    <title>{% block titulo %}Sistema de Notas{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
-        <h1>Sistema de notas Escolar</h1>
+        <h1>Sistema de Notas Escolar</h1>
         <nav>
-            {# url_for('inicio') gera o endereço da função inicio() do app.py}
-            <a href="{{ url_for('inicio')}}">Alunos</a>
+            {# url_for('inicio') gera o endereço da função inicio() do app.py #}
+            <a href="{{ url_for('inicio') }}">Alunos</a>
             <a href="{{ url_for('novo') }}">Novo aluno</a>
-            <a href="{{ url_for('relatorio') }}">Relatorio</a>
+            <a href="{{ url_for('relatorio') }}">Relatórios</a>
         </nav>
     </header>
-
     <main>
-        {% with mensagens = get_flashed_mensages (with_categories=true) %}
-        {% for categoria, texto in mensagens %}
-            <p class="aviso {{ categoria}}">{{ texto }}</p>
+        {% with mensagens = get_flashed_messages(with_categories=true) %}
+            {% for categoria, texto in mensagens %}
+                <p class="aviso {{ categoria }}">{{ texto }}</p>
             {% endfor %}
-            {% endwith %}
+        {% endwith %}
 
-            {% block conteudo %} {% endblock %}
+        {% block conteudo %} {% endblock %}
     </main>
 </body>
 </html>
